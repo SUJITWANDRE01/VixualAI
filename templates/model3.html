@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Question Answering</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/model3.css') }}">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <nav>
+      <div class="nav__logo">
+        <a href="https://www.linkedin.com/in/akshaybhosale-letsdoitbycode/" target="_blank">letsdoitbycode</a>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <i class="ri-menu-line"></i>
+      </div>
+
+      <ul class="nav__links">
+        <li class="link"><a href="{{ url_for('index') }}">Home</a></li>
+        <li class="link"><a href="#use-cases">Features</a></li>
+        <li class="link"><a href="{{ url_for('index') }}#about_team">About</a></li>
+        <li class="link"><a href="#footer_model1">Contact</a></li>
+      </ul>
+        
+    </nav>
+    
+
+<header id="header" class="header__container">
+    <div>
+        <h1>Visual Question Answering</h1>
+        <p>Upload an image and ask a question about it. Our AI will provide an answer.</p>
+        <form id="imageForm">
+            <label class="upload-btn" for="image-upload">Choose Image</label>
+            <input type="file" id="image-upload" name="image" accept="image/*">
+            <div id="image-name"></div> <!-- Display image name -->
+            
+            <!-- Flex container for image preview and question input -->
+            <div class="preview-question-container">
+                <div id="image-preview" class="preview-box"></div> <!-- Preview container -->
+                <textarea id="question" name="question" placeholder="Type your question here..." required></textarea>
+            </div>
+
+            <button type="button" id="generate-btn">Generate Answer</button>
+        </form>
+        <div id="answerResult">
+            <h2>Answer:</h2>
+            <div id="answer"></div>
+        </div>
+    </div>
+</header>
+
+
+<section id="use-cases" class="section__container" >
+  <h2>APPLICATIONS OF THE MODEL</h2>
+  <hr/>
+  <div class="usecases__grid">
+      <div class="usecase__card">
+          <h4>Accessibility</h4>
+          <hr/>
+          <p>Enhance accessibility by providing image descriptions for visually impaired users.</p>
+      </div>
+      <div class="usecase__card">
+          <h4>SEO</h4>
+          <hr/>
+          <p>Improve your website's SEO by adding descriptive alt text to images.</p>
+      </div>
+      <div class="usecase__card">
+          <h4>Content Creation</h4>
+          <hr/>
+          <p>Save time on content creation by automatically generating image descriptions.</p>
+      </div>
+      <div class="usecase__card">
+          <h4>Social Media</h4>
+          <hr/>
+          <p>Create engaging social media posts with detailed image descriptions.</p>
+      </div>
+  </div>
+</section>
+
+
+<footer class="section__container footer__container">
+  <div class="footer__col">
+    <p>
+      Join us in exploring the limitless possibilities of AI. Let's innovate and transform the future together.
+    </p>
+    
+
+  </div>
+  <div class="footer__col" id="footer_model1">
+    <h4>Contact Us</h4>
+    <hr/>
+    <p>
+      For more information, demos, or to discuss how our integrated AI solutions can benefit your business, please contact us at <strong>akshay.bhosale@mitaoe.ac.in</strong>. Our team of experts is ready to help you harness the power of AI to transform your workflows and enhance your user experience.
+    </p>
+    <form action="" class="newsletter-form">
+      <input type="email" name="email_address" placeholder="Enter Your Email" aria-label="email" class="email-field">
+      <button type="submit" class="newsletter-btn">Subscribe Now</button>
+    </form>
+  </div>
+</footer>
+<div class="footer__bar">
+  Copyright © 2024 letsdoitbycode. All rights reserved.
+</div>
+
+
+  
+    
+
+    <script src="{{ url_for('static', filename='js/model3.js') }}"></script>
+
+</body>
+</html>
