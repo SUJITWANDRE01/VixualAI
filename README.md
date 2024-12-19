@@ -20,3 +20,11 @@ This project integrates three different AI models into a Flask web application, 
 ```bash
 pip install -r requirements.txt
 
+## Dependencies
+Flask: Web framework for the app
+transformers: Hugging Face library for BERT-based models
+google-generativeai: For working with Google’s Generative AI model
+torch: For deep learning model processing
+Pillow: Image processing
+dotenv: To load environment variables from .env file
+IPython: Displaying markdown in Jupyter Notebooks
